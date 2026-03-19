@@ -1,10 +1,53 @@
-# Description
+# About
+This is a simple project created to study how an ETL pipeline works using log data.
 
-This project aims to build a complete data pipeline for log analysis, simulating a real-world system monitoring and observability scenario.
+The pipeline reads raw logs, processes the data, and prepares it for analysis.
 
-The application ingests raw log data (collected from external sources), performs data cleaning and transformation, and loads the processed data into a structured database for further analysis.
+---
 
-Throughout the pipeline, log data is standardized and organized to enable meaningful insights, such as request volume, error rates, most accessed endpoints, and system usage patterns.
+## Pipeline
+The project is divided into three main steps:
 
-The project follows the ETL (Extract, Transform, Load) approach and focuses on core data engineering practices, including data processing, pipeline design, and data preparation for analytics.
+- Extract (`extract.py`)
 
+Reads the log data from a file
+
+- Transform (`transform.py`)
+  
+Cleans and structures the data (date, status code, URL, etc.)
+
+- Load / Analysis (`analytics.py`)
+  
+Runs queries and aggregations on the processed data
+
+---
+
+## Files
+
+```
+analytics.py     # queries and aggregations
+config.py        # configuration (database, etc.)
+database.py      # database connection
+extract.py       # data extraction
+transform.py     # data transformation
+log.txt          # sample log data
+main.py          # pipeline execution
+README.md
+
+```
+
+---
+## Technologies
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-000000?style=for-the-badge&logo=postgresql&logoColor=white)
+
+---
+
+## Purpose
+This project was built to practice:
+
+- ETL concepts
+- log processing
+- basic data analysis with SQL
